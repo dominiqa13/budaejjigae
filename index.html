@@ -30,7 +30,7 @@
     .bg img {
         height: 110vh;
         width: 110vw;
-        ;
+
         top: 0%;
     }
 
@@ -49,7 +49,8 @@
     /* Dish image on the left */
     .dish-image {
         display: flex;
-        max-width: 400px;
+        max-width: 500px;
+        width: 100%;
         margin-left: 1rem;
         /* space from the left edge */
         margin-top: 2rem;
@@ -70,11 +71,9 @@
     }
 
     .dish-image img {
-        flex: 1 1 300px;
         width: 100%;
         border-radius: 15%;
         object-fit: cover;
-        border: none;
         animation: leftToRight 1s forwards;
         animation-delay: 0.2s;
         opacity: 0;
