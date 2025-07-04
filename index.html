@@ -11,14 +11,21 @@
 <style>
     body {
         font-family: 'Segoe UI', sans-serif;
-        background: url(images/bg.jpg) no-repeat center fixed;
         color: #222;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    .bg{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        
+    }
+    .bg img{
+        height: 100%;;
+    }
     .container {
         display: flex;
         justify-content: center;
@@ -394,6 +401,9 @@
 </style>
 
 <body>
+    <div class="bg">
+        <img src="images/bg.jpg" alt="">
+    </div>
     <div id="recipe" class="dropdown-content">
         <button class="close-btn" onclick="toggleRecipe()">zamknij</button>
         <h3>Instrukcja</h3>
