@@ -1,0 +1,388 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex: 40%;
+
+}
+
+
+
+
+/* Dish image on the left */
+.dish-image {
+    display: flex;
+    max-width: 400px;
+    margin-left: 1rem;
+    /* space from the left edge */
+    margin-top: 2rem;
+    /* lowers the image */
+}
+
+.close-btn {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    width: 100px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dish-image img {
+    flex: 1 1 300px;
+    width: 100%;
+    border-radius: 15%;
+    object-fit: cover;
+    border: none;
+    animation: leftToRight 1s forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+/* Right section content */
+.title-section {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Text titles */
+.subtitle {
+    font-size: 3rem;
+    color: #666;
+    letter-spacing: 1px;
+    animation: topToBottom 1s forwards;
+    opacity: 0;
+}
+
+.title {
+    font-size: 5rem;
+    text-wrap: nowrap;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 119, 0);
+    opacity: 0;
+
+    animation: topToBottom 1s forwards;
+    animation-delay: 0.2s;
+
+}
+
+.text-content span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    color: white;
+
+    margin-top: 5px;
+}
+
+#ingredients,
+#recipe {
+    position: absolute;
+    max-width: 500px;
+    width: 95%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content ol,
+.dropdown-content ul {}
+
+
+/* History container (green box area) */
+.container-history {
+    background-color: #a48574;
+    border-radius: 16px;
+    padding: 50px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: rightToLeft 1s forwards;
+    animation-delay: 0.2s;
+
+}
+
+/* Dropdown buttons (blue circle area) */
+
+
+.dropdown-btn {
+    display: block;
+    width: 150px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #ff7043;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.dropdown-btn:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ff7043;
+}
+
+
+
+
+.dropdown-content {
+    display: none;
+    padding: 30px 30px 50px 50px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(149, 149, 149, 1);
+    color: white;
+    border: none;
+    width: 95%;
+
+}
+
+.dropdown-content h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+    color: #ffeee9;
+    text-align: center;
+}
+
+.dropdown-content li {
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+.main-container {
+    display: flex;
+    gap: 3rem;
+
+    height: 100vh;
+}
+
+.button-container {
+    width: 100%;
+
+    display: flex;
+    gap: 50px;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container-history-outer {
+    flex: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-content-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dish-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .title-section {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .dropdown-btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dish-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .title-section {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-content {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dish-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .title-section {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .dropdown-content {
+        width: 90%;
+        margin: auto;
+    }
+
+    #ingredients,
+    #recipe {
+        position: absolute;
+        width: 75%;
+
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@keyframes topToBottom {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
