@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budae Jjigae by D&R</title>
-    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
 </head>
 
 <style>
@@ -17,16 +17,23 @@
         justify-content: center;
         align-items: center;
     }
-    .bg{
+
+    .bg {
         width: 100vw;
         height: 100vh;
         position: fixed;
-        
+        top: 0;
+        z-index: -10000;
+
     }
-    .bg img{
-        height: 100vh;;
+
+    .bg img {
+        height: 110vh;
+        width: 110vw;
+        ;
         top: 0%;
     }
+
     .container {
         display: flex;
         justify-content: center;
@@ -125,8 +132,6 @@
         align-items: center;
     }
 
-    .dropdown-content ol,
-    .dropdown-content ul {}
 
 
     /* History container (green box area) */

@@ -1,6 +1,5 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: url(images/bg.jpg) no-repeat center center fixed;
     color: #222;
     display: flex;
     flex-direction: column;
